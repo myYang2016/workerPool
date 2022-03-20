@@ -1,10 +1,10 @@
-import WorkerPool from '../src/WorkerPool';
+import WorkerPool from '../src';
 import * as path from 'path';
 import { delay } from '../src/utils';
 
 describe('test worker pool', function () {
   const workerPool = new WorkerPool({
-    path: path.resolve(__dirname, '../src/thread/index.js'),
+    path: path.resolve(__dirname, './thread/index.js'),
   });
   test('worker init', async function () {
     expect(workerPool instanceof WorkerPool);
